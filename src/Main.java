@@ -80,7 +80,7 @@ public class Main {
         myHybrid.drive(100);
         System.out.println(myHybrid.getFuelLevel());
 
-        /*Task 3 ============================*/
+        /*Task 3 ============================ DON'T FINISHED*/
 
 //        Measurable latvia = new Countries(64589.15);
 //        Measurable lithuania = new Countries(65302.40);
