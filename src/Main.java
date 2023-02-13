@@ -80,24 +80,26 @@ public class Main {
         myHybrid.drive(100);
         System.out.println(myHybrid.getFuelLevel());
 
-        /*Task 3 ============================ DON'T FINISHED*/
+        /*Task 3 ============================*/
 
-//        Measurable latvia = new Countries(64589.15);
-//        Measurable lithuania = new Countries(65302.40);
-//        Measurable estonia = new Countries(45339.84);
-//        Measurable vvv = new Countries(35476390.85);
-//        System.out.println(latvia.getMeasure());
-
+        Countries[] countries = new Countries[]{
+                new Countries(64589.15),
+                new Countries(65302.40),
+                new Countries(45339.84),
+                new Countries(35476.85)
+        };
+        Countries maxArea = (Countries) maximum(countries);
+        System.out.println("The largest area is: " + maxArea.getMeasure());
 
     }
+    public static Measurable maximum(Measurable[] objects) {
+        Measurable result = objects[0];
+        for (int i = 0; i < objects.length; i++) {
+            if (result.getMeasure() < objects[i].getMeasure()) {
+                result = objects[i];
+            }
+        }
+        return result;
+    }
 
-//    public static Measurable maximum(Measurable[] objects) {
-//        Measurable result = objects[0];
-//        for (int i = 0; i < objects.length; i++) {
-//            if (result < objects[i]) {
-//                result = objects[i];
-//            }
-//        }
-//        return result;
-//    }
 }

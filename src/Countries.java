@@ -15,10 +15,14 @@ public class Countries implements Measurable {
         return measure;
     }
 
-    public double[] newArray(double a, double b, double c, double d) {
-        double[] array = new double[] {a, b, c, d};
-        return array;
+    public static Measurable maximum(Measurable[] objects) {
+        Measurable result = objects[0];
+        for (int i = 0; i < objects.length; i++) {
+            if (result.getMeasure() < objects[i].getMeasure()) {
+                result = objects[i];
+            }
+        }
+        return result;
     }
-
 
 }
